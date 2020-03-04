@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>from currency</th>
+                <th>to currency</th>
+            </tr>
+            <tr>
+                <td><input id="Amount"></td>
+                <td>
+                    <select name="bên đổi" id="từ">
+                        <option value="vn" id=selected>VN</option>
+                        <option value="usd" selected>USA</option>
+                        <option value="jpy" selected>JPn</option>
+                 </select>
+            </td>
+             <td>
+                 <select name="bên đổi" id="den">
+                    <option value="vn" id=selected>VND</option>
+                    <option value="usd" selected>USD</option>
+                    <option value="jpy" selected>JPn</option>
+                 </select>
+            </td>
+            <td><button onclick="convert()">convert</button></td>
+            </tr>
+        </table>
+        <div id="result"></div>
+        <script>
+             function convert() {
+                 let amount=document.getElementById('Amount').value;
+                 let from=document.getElementById('từ').value;
+                 let to=document.getElementById('den').value;
+            if (from=="vn" && to=="usd") document.getElementById('result').innerHTML=amount/23000 +"USD";
+            if (from=="vn" && to=="jpy") document.getElementById('result').innerHTML=amount/2000 +"JPY";
+            if (from=="jpy" && to=="vn") document.getElementById('result').innerHTML=amount*2000 +"VND";
+            if (from=="usd" && to=="vn") document.getElementById('result').innerHTML=amount*23000 +"VND";}
+         </script>
+      
+    
+    </div> 
+</body>
+</html>
