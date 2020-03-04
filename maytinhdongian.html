@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="a"></td>
+            <td colspan="2"><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td><button onclick="add()" id="cong">Addition(+)</button></td>
+            <td><button onclick="sub()" id="tru">Subtraction(-)</button></td>
+            <td><button onclick="mul()" id="nhan">Multiplication(X)</button></td>
+            <td><button onclick="div()" id="chia">Divition(/)</button></td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+           
+            function add() {
+                let a= +document.getElementById('a').value;
+                let b= +document.getElementById('b').value;
+                document.getElementById('result').innerHTML=a+b;
+                            }               
+            function sub() {
+                let a= +document.getElementById('a').value;
+                let b= +document.getElementById('b').value;
+                document.getElementById('result').innerHTML=a-b;
+                            }
+             function mul() {
+                let a= +document.getElementById('a').value;
+                let b= +document.getElementById('b').value;
+                document.getElementById('result').innerHTML=a*b;
+                            }
+             function div() {
+                let a= +document.getElementById('a').value;
+                let b= +document.getElementById('b').value;
+                document.getElementById('result').innerHTML=a/b;
+                            }
+    </script>
+</body>
+</html>
