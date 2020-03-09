@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;background-color: rgb(252, 232, 239);">
+    <h1 style="font-size: 50px;color: rgb(250, 133, 0);">CHÀO MỪNG BẠN ĐẾN VỚI GAME ĐOÁN SỐ</h1>
+    <h1>Hãy bắt đầu với tôi ngay nào!!! </h1>
+    <h1>↓↓↓</h1>
+    <button id="choi" onclick="choi()" style="font-size: 60px;background-color: rgb(130, 24, 236);">Bắt đầu</button>
+    <script>
+        function choi() {
+            let tu = +prompt("khoảng cách bạn muốn bắt đầu chơi từ: ");
+            let den = +prompt("khoảng cách bạn muốn kết thúc là: ");
+            let kcach = den-tu+1;
+            let dapan = Math.floor(Math.random() * kcach) + tu;
+            let lanchoi = 0;
+            let i = 3;
+            let kq = 0;
+            while (lanchoi<=2 && kq==0){
+                let doan=+prompt("bạn còn "+i+ " lượt chơi! bạn đoán đó là số mấy");
+                if (doan==dapan){alert("bạn đã đúng!Đáp án là: "+dapan);kq=1;}
+                    else {lanchoi=lanchoi+1;i=i-1;}
+                 if (lanchoi==3){alert("Game over!Đáp án là: "+dapan)}
+            }
+        }
+    </script>
+</body>
+
+</html>
