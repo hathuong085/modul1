@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{color: red;}
+        button{background-color: rgb(156, 143, 143);}
+        body{background-color: rgb(157, 233, 157);}
+        input{width: 220px;}
+    </style>
+</head>
+<body >
+    <h3 style="text-align: center;">ĐĂNG NHẬP TÀI KHOẢN</h3>
+    <table style="margin: auto; border: 1px solid;width: 230px;background-color: rgb(240, 172, 217);" >
+        <tr>
+            <td colspan="2">Tên đăng nhập</td>
+      
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" placeholder="tên đăng nhập" id="ten"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><p id="ktten"></p></td>
+        </tr>
+        <tr>
+            <td colspan="2">Mật khẩu</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" placeholder="Nhập mật khẩu" id="mk"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><p id="ktmk"></p></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><button onclick="kiemtra()">Đăng nhập</button></td>
+            <td style="text-align: center;"><button>Đăng ký</button></td>
+        </tr>
+        <script>
+            function kiemtra(){
+                let ten=document.getElementById("ten").value;
+                let mk=document.getElementById("mk").value;
+                if (ten!="ngan_cute_hotme"){
+                    document.getElementById("ktten").innerHTML="Sai tên đăng nhập!";
+                } else if (mk!="ngan_dthuong"){
+                    document.getElementById("ktmk").innerHTML="Sai mật khẩu!"
+                } else {
+                    alert("Đăng nhập thành công!Chúc chị 8/3 vui vẻ!")
+                }
+            }
+        </script>
+    </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="position:absolute; left: 220px; top: 175px;" id="amount">
+        Do You Love Me?
+    </h1>
+    <button style="position:absolute; left: 300px; top: 240px;" onclick="alert('LOVE U <3')">Yes</button>
+    <button style="position:absolute; left: 350px; top: 240px;" onclick="amount" onmouseover="noHover()" style="position:absolute; left: 448px; top: 522px;" id="no">No</button>
+  <script>
+      function noHover() {
+          let btnNo = document.getElementById('no');
+          let leff = Math.floor(Math.random() * 1000) + 'px';
+          btnNo.style.left = leff;
+          let top =  Math.floor(Math.random() * 200) + 'px';
+          btnNo.style.top = top;
+      }
+  </script>
+</body>
+</html>
